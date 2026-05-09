@@ -20,7 +20,8 @@ jobs:
 
       - name: Build
         run: dotnet build PicoStreamingAssistantFTUDP/PicoStreamingAssistantFTUDP.sln --configuration Release
-
+      - name: Find DLLs
+        run: find . -name "*.dll" -path "*/Release/*"
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
