@@ -25,7 +25,7 @@ public sealed class Pico4SAFTExtTrackingModule : ExtTrackingModule, IDisposable
     public static readonly string LOGGER_PATH = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "VRCFaceTracking\\PICOLogs.csv");
     private PacketLogger<PxrFTInfo>? logger;
 
-    public override (bool SupportsEye, bool SupportsExpression) Supported { get; } = (true, true);
+    public override (bool SupportsEye, bool SupportsExpression) Supported { get; } = (true, false);
 
     public Pico4SAFTExtTrackingModule()
     {
