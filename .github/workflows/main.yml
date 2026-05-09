@@ -20,10 +20,9 @@ jobs:
 
       - name: Build
         run: dotnet build PicoStreamingAssistantFTUDP/PicoStreamingAssistantFTUDP.sln --configuration Release
-      - name: Find DLLs
-        run: find . -name "*.dll" -path "*/Release/*"
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: Pico4SAFTExtTrackingModule
-          path: '**/bin/Release/**/*.dll'
+          path: PicoStreamingAssistantFTUDP/PicoStreamingAssistantFTUDP/bin/x64/Release/net7.0/Pico4SAFTExtTrackingModule.dll
